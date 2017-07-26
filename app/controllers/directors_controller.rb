@@ -35,6 +35,7 @@ class DirectorsController < ApplicationController
    end
  
    def update_row
+     @director = Director.find(params[:the_id])
      render("directors_templates/update_row.html.erb")
    end
  

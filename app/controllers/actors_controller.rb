@@ -26,7 +26,7 @@ class ActorsController < ApplicationController
    end
  
    def show
-      @actor = Actor.find(params[:an_id])
+     @actor = Actor.find(params[:an_id])
      render("actors_templates/show.html.erb")
    end
  
@@ -35,6 +35,7 @@ class ActorsController < ApplicationController
    end
  
    def update_row
+     @actor = Actor.find(params[:the_id])
      render("actors_templates/update_row.html.erb")
    end
  

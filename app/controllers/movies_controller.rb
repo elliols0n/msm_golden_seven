@@ -36,10 +36,11 @@ class MoviesController < ApplicationController
    end
  
    def update_row
+     @movie = Movie.find(params[:the_id])
      render("movies_templates/update_row.html.erb")
    end
  
    def destroy_row
      render("movies_templates/destroy_row.html.erb")
    end
- end
+end
