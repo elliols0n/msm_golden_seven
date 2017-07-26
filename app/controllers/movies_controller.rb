@@ -27,6 +27,7 @@ class MoviesController < ApplicationController
    end
  
    def show
+     @movie = Movie.find(params[:an_id])
      render("movies_templates/show.html.erb")
    end
  
