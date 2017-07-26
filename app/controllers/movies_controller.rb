@@ -41,6 +41,9 @@ class MoviesController < ApplicationController
    end
  
    def destroy_row
+     m = Movie.find(params[:toast_id]
+     m.destroy
+     @new_count = Movie.count
      render("movies_templates/destroy_row.html.erb")
    end
 end

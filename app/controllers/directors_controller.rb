@@ -40,6 +40,9 @@ class DirectorsController < ApplicationController
    end
  
    def destroy_row
+     d = Director.find(params[:toast_id])
+     d.destroy
+     @new_count = Director.count      
      render("directors_templates/destroy_row.html.erb")
    end
- end
+end
