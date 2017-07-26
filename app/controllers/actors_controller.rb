@@ -26,6 +26,7 @@ class ActorsController < ApplicationController
    end
  
    def show
+      @actor = Actor.find(params[:an_id])
      render("actors_templates/show.html.erb")
    end
  
