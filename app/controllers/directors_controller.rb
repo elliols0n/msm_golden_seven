@@ -26,6 +26,7 @@ class DirectorsController < ApplicationController
    end
  
    def show
+     @director = Director.find(params[:an_id])
      render("directors_templates/show.html.erb")
    end
  

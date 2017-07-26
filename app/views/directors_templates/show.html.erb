@@ -1,1 +1,19 @@
-<h1>Hi show director</h1>
+<h1>Director Details</h1>
+  
+  <p><strong>Name:</strong> <%= @director.name %></p>
+  <p><strong>DOB:</strong> <%= @director.dob %></p>
+  <p><strong>Bio:</strong> <%= @director.bio %></p>
+  
+  <img src="<%= @director.image_url %>">
+    
+  <a href="/actors" class="btn btn-default">
+    Go back
+  </a>
+  
+  <a href="/actors/<%= @director.id %>/edit" class="btn btn-default">
+    Edit
+  </a>
+  
+  <a href="/delete_actor/<%= @director.id %>" class="btn btn-default">
+    Delete
+  </a>
