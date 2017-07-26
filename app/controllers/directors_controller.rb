@@ -32,6 +32,7 @@ class DirectorsController < ApplicationController
    end
  
    def edit_form
+     @director = Director.find(params[:some_id])
      render("directors_templates/edit_form.html.erb")
    end
  
