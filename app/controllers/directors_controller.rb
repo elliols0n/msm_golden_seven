@@ -22,6 +22,7 @@ class DirectorsController < ApplicationController
    end
  
    def index
+     @list_of_directors = Director.order(:created_at => :desc)
      render("directors_templates/index.html.erb")
    end
  

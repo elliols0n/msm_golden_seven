@@ -1,1 +1,16 @@
-<h1>Hi index director</h1>
+<h1>All Directors</h1>
+
+<a href="/directors/new">
+  Add a new actor
+</a>
+
+<% @list_of_directors.each do |the_director| %>
+  <div class="thumbnail">
+    <img src="<%= the_director.image_url %>"></br>
+    <div class="each_director">
+      <button><a href="/directors/<%= the_director.id %>" class="btn btn-default btn-block">Show Details</a></button>
+      <button><a href="/directors/<%= the_director.id %>/edit" class="btn btn-default btn-block">Edit</a></button>
+      <button><a href="/delete_director/<%= the_director.id %>" class="btn btn-default btn-block">Delete</a></button>
+    </div></br>
+  </div>
+<% end %>
