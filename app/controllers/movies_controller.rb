@@ -23,6 +23,7 @@ class MoviesController < ApplicationController
    end
  
    def index
+     @list_of_movies = Movie.order(:created_at => :desc)
      render("movies_templates/index.html.erb")
    end
  
