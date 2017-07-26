@@ -1,0 +1,14 @@
+<h1>All Movies</h1>
+
+<a href="/movies/new">Add a new movie</a>
+
+<% @list_of_movies.each do |the_movie| %>
+  <div class="thumbnail">
+    <img src="<%= the_movie.image_url %>"></br>
+    <div class="each_movie">
+      <button><a href="/movies/<%= the_movie.id %>" class="btn btn-default btn-block">Show Details</a></button>
+      <button><a href="/movies/<%= the_movie.id %>/edit" class="btn btn-default btn-block">Edit</a></button>
+      <button><a href="/delete_movie/<%= the_movie.id %>" class="btn btn-default btn-block">Delete</a></button>
+    </div></br>
+  </div>
+<% end %>
