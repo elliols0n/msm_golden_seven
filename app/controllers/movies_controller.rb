@@ -33,6 +33,7 @@ class MoviesController < ApplicationController
    end
  
    def edit_form
+     @movie = Movie.find(params[:some_id])
      render("movies_templates/edit_form.html.erb")
    end
  
