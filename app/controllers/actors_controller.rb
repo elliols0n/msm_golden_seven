@@ -32,6 +32,7 @@ class ActorsController < ApplicationController
    end
  
    def edit_form
+     @actor = Actor.find(params[:some_id])      
      render("actors_templates/edit_form.html.erb")
    end
  
