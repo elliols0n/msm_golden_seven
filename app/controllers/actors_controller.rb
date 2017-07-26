@@ -22,6 +22,8 @@ class ActorsController < ApplicationController
    end
  
    def index
+     @list_of_actors = Actor.order(:created_at => :desc)
+   #  @actor = Actor.find(params[:an_id])     
      render("actors_templates/index.html.erb")
    end
  
