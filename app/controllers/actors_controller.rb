@@ -40,6 +40,10 @@ class ActorsController < ApplicationController
    end
  
    def destroy_row
+     a = Actor.find(params[:toast_id])
+     a.destroy
+     @new_count = Actor.count
+     
      render("actors_templates/destroy_row.html.erb")
    end
 end
