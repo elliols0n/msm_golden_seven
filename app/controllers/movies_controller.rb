@@ -7,6 +7,18 @@ class MoviesController < ApplicationController
    end
  
    def create_row
+     m = Movie.new
+ 
+     m.title = params[:movie_title]
+     m.year = params[:movie_year]
+     m.duration = params[:movie_duration]
+     m.description = params[:movie_description]
+   #  m.image = params["movie_image_url"]
+
+     m.save
+ 
+     @current_count = Movie.count
+
      render("movies_templates/create_row.html.erb")
    end
  

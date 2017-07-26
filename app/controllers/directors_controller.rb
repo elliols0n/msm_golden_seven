@@ -7,6 +7,17 @@ class DirectorsController < ApplicationController
    end
  
    def create_row
+     d = Director.new
+ 
+     d.name = params[:director_name]
+     d.bio = params[:director_bio]
+     d.dob = params[:director_dob]
+   #  d.image = params[:director_image_url]
+
+     d.save
+ 
+     @current_count = Director.count
+     
      render("directors_templates/create_row.html.erb")
    end
  

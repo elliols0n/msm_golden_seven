@@ -7,6 +7,17 @@ class ActorsController < ApplicationController
    end
  
    def create_row
+     a = Actor.new
+ 
+     a.name = params[:actor_name]
+     a.bio = params[:actor_bio]
+     a.dob = params[:actor_dob]
+   #  a.image = params[:actor_image_url]
+
+     a.save
+ 
+     @current_count = Actor.count
+     
      render("actors_templates/create_row.html.erb")
    end
  
@@ -29,4 +40,4 @@ class ActorsController < ApplicationController
    def destroy_row
      render("actors_templates/destroy_row.html.erb")
    end
- end
+end
